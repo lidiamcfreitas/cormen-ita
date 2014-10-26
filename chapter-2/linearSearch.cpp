@@ -21,13 +21,14 @@ int main()
         std::cout << "null" << std::endl;
     
 }
-
+// returns the number of times that the value appears in the vector
 int linearSearch(std::vector<int> &vector, int value, std::vector<int> &position)
 {
     int j = 0;
     
     for (int i = 0; i<vector.size(); i++)
     {
+        // if value at position is equal to searched value, add to vector of results
         if (vector.at(i)==value)
         {
             position.push_back(i);
