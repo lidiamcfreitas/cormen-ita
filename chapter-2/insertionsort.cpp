@@ -22,13 +22,11 @@ int main()
 
 void askForVector(std::vector<int> &vector) // ask user for a vector of integers
 {
-    int size;
+    int size, value;
     
     std::cout << "please insert the size of vector to order: ";
     std::cin >> size; // ask for the size of the vector
     vector.resize(size);
-    
-    int value;
     
     for (int i = 0; i<size; i++){
         std::cout << "please insert a value for the " << i + 1 << " position: ";
