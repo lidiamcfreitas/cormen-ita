@@ -47,7 +47,7 @@ void reverseInsertionSort( std::vector<int> &vector) // order vector with insert
         key = vector[j];
         for (; i<j; i++)
         {
-            if(vector[i]<=key) // stop if there equal or bigger value than the key
+            if(vector[i]<=key) // stop if there equal or smaller value than the key
                 break;
         }
         if (i!=j) { // if the value is not the key itself
