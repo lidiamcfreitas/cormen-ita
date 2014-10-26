@@ -1,9 +1,4 @@
-#include <iostream>
-#include <vector>
-
-void askForVector(std::vector<int> &vector);
-void printVector(std::vector<int> &vector);
-void reverseInsertionSort(std::vector<int> &vector);
+#include "insertionsort.h"
 
 int main()
 {
@@ -20,20 +15,7 @@ int main()
     
 }
 
-void askForVector(std::vector<int> &vector) // ask user for a vector of integers
-{
-    int size, value;
-    
-    std::cout << "please insert the size of vector to order: ";
-    std::cin >> size; // ask for the size of the vector
-    vector.resize(size);
-    
-    for (int i = 0; i<size; i++){
-        std::cout << "please insert a value for the " << i + 1 << " position: ";
-        std::cin >> value;
-        vector[i] = value; // fill the vector with the values given
-    }
-    
+
 }
 
 
@@ -45,26 +27,23 @@ void reverseInsertionSort( std::vector<int> &vector) // order vector with insert
     {
         int i=0;
         key = vector[j];
+        
         for (; i<j; i++)
         {
             if(vector[i]<=key) // stop if there equal or smaller value than the key
                 break;
         }
+        
         if (i!=j) { // if the value is not the key itself
             int save = i; // save position where key will be entered
 
             for (i=j; i>save; i--)
                 vector[i] = vector[i-1]; // shift values to the right
+            
             vector[save] = key; // put key in the right place
         }
     }
     
 }
 
-void printVector(std::vector<int> &vector) // prints the vector
-{
-    
-    for (int i: vector)
-        std::cout << ":" << i;
-    std::cout << ":\n";
-}
+
