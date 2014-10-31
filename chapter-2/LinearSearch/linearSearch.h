@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#include "askAndPrintVector.h"
+#include "../VectorIO/askAndPrintVector.h"
 
 int linearSearch(std::vector<int> &vector, int value, std::vector<int> &position);
 

@@ -1,4 +1,4 @@
-#include "insertionsort.h"
+#include "reverseInsertionSort.h"
 
 int main()
 {
@@ -13,9 +13,6 @@ int main()
     reverseInsertionSort(vector); // order vector with insertion sort
     printVector(vector);
     
-}
-
-
 }
 
 
