@@ -6,11 +6,10 @@ int main()
     std::vector<int> position;
     int value;
     
-    position.resize(vector.size());
-    
     askForVector(vector); // ask user for vector of integers
     printVector(vector);
     
+    position.resize(vector.size());
     
     std::cout << "Which value do you want to search? ";
     std::cin >> value;
